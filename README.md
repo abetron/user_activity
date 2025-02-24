@@ -15,7 +15,7 @@ Code needed on the client side
     socket.bind("tcp://*:5558")
 
 ### Requesting the Data
-Once the socket has been bound, the user activity microservice can be called by the client by sending a user id in the form of a string.
+The client by sending a user id in the form of a string.
 An example call is as follows:
 
     socket.send_string("1")
