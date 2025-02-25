@@ -16,7 +16,7 @@ Code needed on the client side
 
 ### Requesting the Data
 The client by sending a user id in the form of a string.
-An example call is as follows:
+An example call is as follows, where the string is a user id:
 
     socket.send_string("1")
 
@@ -43,4 +43,10 @@ If there are no images viewed, the response will be similar to:
     Images Viewed: No images recorded.
 
 ## UML Sequence Diagram
+1. Main program will update the users.json file.
+2. Main program will send request for user activity by sending a user id to the microservice.
+3. If the user id exists, the microservice will send a response as a formatted string with the user id, interactions, and images viewed.
+4. Microservice can be called once per second max.
+5. Microservice will continue to listen until the quit command, 'Q' is sent.
 
+![UML](https://github.com/user-attachments/assets/4c555398-1f1f-4478-b7c6-fd8bffac7214)
